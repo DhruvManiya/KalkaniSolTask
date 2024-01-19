@@ -52,7 +52,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="w-full h-[45vh] fixed -z-30">
+      <div className="w-full h-[26.875rem] fixed -z-30">
         <img
           src="/bg3.jpg"
           alt=""
@@ -61,9 +61,9 @@ const Home = () => {
         <div className="absolute h-full w-full bg-black/60 -z-20"></div>
       </div>
       <main>
-        <section className="w-full h-[45vh] flex justify-center items-center relative">
+        <section className="w-full h-[26.875rem] flex justify-center items-center relative">
           <div className="flex flex-col gap-8 items-center">
-            <h1 className="Permanent text-white text-[4rem] z-30 text-center">
+            <h1 className="Permanent text-white lg:text-[4rem] sm:text-[3.5rem] text-[2.5rem] z-30 text-center">
               Search your{" "}
               <span
                 className={
@@ -82,7 +82,7 @@ const Home = () => {
               </span>{" "}
               charecters
             </h1>
-            <div className=" h-10 flex justify-center items-center z-30 w-full">
+            <div className=" h-10 flex justify-center items-center z-30 px-8 w-full">
               <span
                 className="h-full w-12 bg-white rounded-l-[1.5rem] flex justify-center items-center"
                 onClick={() => inputRef.current.focus()}
@@ -110,7 +110,7 @@ const Home = () => {
                 onChange={(e) => setSearchParam(e.target.value)}
               />
             </div>
-            <p className="text-white text-[2rem] text-center">
+            <p className="text-white sm:text-[2rem] text-[1.5rem] text-center">
               Total{" "}
               <span
                 className={
@@ -135,10 +135,10 @@ const Home = () => {
         {totalChar !== 0 ? (
           <section className=" bg-[#111] text-white flex flex-col items-center justify-center relative">
             {charDataStack ? (
-              <ul className="m-12 w-[90%] flex flex-col justify-center items-center gap-12">
+              <ul className="m-12 md:w-[90%] w-[95%] flex flex-col justify-center items-center gap-12">
                 {charDataStack.map((char) => (
                   <li
-                    className={`w-full py-4 px-16 rounded-md border-[2px] border-b-[6px] ${
+                    className={`w-full py-4 md:px-16 px-6 rounded-md border-[2px] border-b-[6px] ${
                       (Number(char.mal_id) * randomNumber) % 5 > 2
                         ? (Number(char.mal_id) * randomNumber) % 5 > 3
                           ? (Number(char.mal_id) * randomNumber) % 5 > 4
