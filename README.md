@@ -13,6 +13,9 @@ Now run Installation comands and start servers
   npm install
   npm run dev
 ```
+
+Live site: https://anime-charecters.netlify.app/
+
 # Algoritham Task 
 
 ## Pettern task Installation
