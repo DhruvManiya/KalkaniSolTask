@@ -1,6 +1,5 @@
 const pettern = (n) => {
   if (n > 0) {
-
     let finalAns = [];
     let subAns = [];
 
@@ -9,7 +8,6 @@ const pettern = (n) => {
       let ASCII = 65;
 
       for (let j = 1; j <= 2 * n - 1; j++) {
-
         if (j < n - i || j > n + i) {
           tempArr.push("   ");
         } else {
@@ -18,6 +16,7 @@ const pettern = (n) => {
           else {
             tempArr.push(" " + String.fromCharCode(ASCII) + " ");
             ASCII++;
+            if (ASCII === 91) ASCII = 65;
           }
         }
       }
@@ -26,14 +25,13 @@ const pettern = (n) => {
       finalAns.push(tempArr.join(""));
       subAns.push(tempArr.join(""));
     }
-    
-    subAns.reverse()
-    subAns.forEach((el,i) => {
-        if(i !== 0) finalAns.push(el)
-    })
+
+    subAns.reverse();
+    subAns.forEach((el, i) => {
+      if (i !== 0) finalAns.push(el);
+    });
 
     return finalAns;
-
   } else return "Enter valid number";
 };
 
@@ -42,3 +40,4 @@ console.log(pettern(6));
 console.log(pettern(5));
 console.log(pettern(4));
 console.log(pettern(3));
+console.log(pettern(30));
